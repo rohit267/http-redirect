@@ -1,3 +1,6 @@
+ARG TARGET
+ENV TARGET=${TARGET}
+
 FROM golang:1.18-bullseye AS server-builder
 RUN export GOBIN=$HOME/work/bin
 WORKDIR /go/src/app
